@@ -1,0 +1,218 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER AND LOGO */
+header {
+    background-color: #ff8c42;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.logo {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* MENU BUTTON */
+.menu-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-button {
+    background: #fff;
+    color: #ff8c42;
+    font-size: 24px;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-button:hover {
+    background: #ff6f00;
+    color: white;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ff8c42;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    text-align: left;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ffccaa;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-menu ul li a:hover {
+    background: #ff8c42;
+    color: white;
+    padding-left: 5px;
+}
+
+/* WELCOME MESSAGE */
+.welcome-message {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #444;
+    padding: 20px;
+}
+
+/* MAIN ACTIONS */
+.main-actions {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-actions h3 {
+    color: #ff8c42;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* CITY SELECTION */
+.city-selection {
+    margin-top: 15px;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ff8c42;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #ff6f00;
+}
+
+/* RESTAURANT LIST */
+#restaurant-list {
+    margin-top: 20px;
+}
+
+.restaurant-item {
+    background: #ffe5d1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-item:hover {
+    background: #ffccaa;
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    width: 100%;
+    background: #ff8c42;
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .menu-button {
+        font-size: 20px;
+    }
+
+    .dropdown-menu {
+        width: 150px;
+    }
+
+    .main-actions {
+        width: 95%;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}

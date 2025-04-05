@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Admin Login</h1>
+    <img src="https://i.hizliresim.com/o550hay.jpg" alt="MenuMaster Logo" class="logo">
+</header>
+
+<main>
+    <section class="login-form">
+        <h2>Login as Admin</h2>
+        <form onsubmit="return adminLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 MenuMaster. All rights reserved.</p>
+</footer>
+
+<script>
+    // Admin login function
+    function adminLogin(event) {
+        event.preventDefault();  // blocking to refresh page
+
+        // login info
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // admin login /for try
+        const adminUsername = 'admin3441';
+        const adminPassword = 'admin3441';
+
+        // login control
+        if (username === adminUsername && password === adminPassword) {
+            window.location.href = 'admin-main-menu.html';  // Admin Main Menu'ye yönlendir
+        } else {
+            document.getElementById('error-message').innerText = 'Incorrect username or password!';
+        }
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+/* GENEL AYARLAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER VE LOGO */
+header {
+    background-color: #ff8c42;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* BUTONLAR */
+button {
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff6f00;
+}
+
+/* EXIT BUTONU ÖZEL */
+.exit-button {
+    margin-top: 20px;
+}
+
+.exit-button button {
+    background-color: #ff3b3b;
+}
+
+.exit-button button:hover {
+    background-color: #e60000;
+}
+
+/* AÇILIR-KAPANIR MENÜ (DETAILS) */
+details {
+    background-color: #fff;
+    border: 1px solid #ff8c42;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+details summary {
+    cursor: pointer;
+    background-color: #ff8c42;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+details[open] summary {
+    background-color: #ff6f00;
+}
+
+details summary:hover {
+    background-color: #ff6f00;
+}
+
+/* LİSTELER VE İÇERİK */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffe5d1;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+li:hover {
+    background-color: #ffccaa;
+}
+
+/* FORM VE GİRİŞ KUTULARI */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ff8c42;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ff8c42;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #ff6f00;
+    outline: none;
+}
+
+/* BAŞLIKLAR */
+h1, h2, h3 {
+    color: #ff8c42;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* KAYDIRMALI LİSTELER (SCROLL) */
+.scroll-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ff8c42;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.scroll-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-list::-webkit-scrollbar-thumb {
+    background-color: #ff8c42;
+    border-radius: 5px;
+}
+
+/* RESPONSİVE TASARIM */
+@media (max-width: 768px) {
+    header, form, details {
+        width: 90%;
+    }
+    
+    button {
+        padding: 5px 15px;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reviews - MenuMaster</title>
+    <link rel="stylesheet" href="../assets/css/usercss/user.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Reviews</h1>
+
+        <!-- If no reviews, show this message -->
+        <div id="emptyMessage" class="empty-message">
+            You haven't written any reviews yet.
+        </div>
+
+        <!-- Review List -->
+        <div id="reviewsList">
+            <!-- Reviews will be loaded here -->
+            <div class="review">
+                <p class="restaurant-name">Restaurant A</p>
+                <p class="rating">Rating: ★★★★☆</p>
+                <p>Great food and service. Would definitely visit again!</p>
+            </div>
+
+            <div class="review">
+                <p class="restaurant-name">Restaurant B</p>
+                <p class="rating">Rating: ★★★☆☆</p>
+                <p>Decent experience, but the food could be better.</p>
+            </div>
+
+            <div class="review">
+                <p class="restaurant-name">Restaurant C</p>
+                <p class="rating">Rating: ★★★★★</p>
+                <p>Amazing ambiance and delicious food. Highly recommend!</p>
+            </div>
+        </div>
+        
+        <button onclick="clearReviews()">Clear All Reviews</button>
+    </div>
+
+</body>
+</html>

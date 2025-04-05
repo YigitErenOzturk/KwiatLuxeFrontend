@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Main Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Welcome, Admin!</h1>
+    <img src="https://i.hizliresim.com/o550hay.jpg" alt="MenuMaster Logo" class="logo">
+    <div class="menu-container">
+        <!-- Admin Menu Button -->
+        <button id="menu-toggle" class="menu-button">☰</button>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <ul>
+                <li><a href="view-users.html">User Management</a></li>
+                <li><a href="manage-restaurants.html">Restaurant Management</a></li>
+                <li><a href="view-feedback.html">Reviews Management</a></li>
+<li><a href="admin-settings.html">Admin Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="welcome-message">
+        <h2>Admin Dashboard</h2>
+        <p>Manage users, restaurants, and reviews from here.</p>
+    </section>
+
+    <section class="admin-actions">
+        <div class="action">
+            <h3>View All Users</h3>
+            <button onclick="window.location.href='admin-users.html'">Manage Users</button>
+        </div>
+        <div class="action">
+            <h3>View All Restaurants</h3>
+            <button onclick="window.location.href='admin-restaurants.html'">Manage Restaurants</button>
+        </div>
+        <div class="action">
+            <h3>View All Reviews</h3>
+            <button onclick="window.location.href='admin-reviews.html'">Manage Reviews</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 MenuMaster. All rights reserved.</p>
+</footer>
+
+<script>
+    // Toggle Dropdown Menu
+    const menuToggleButton = document.getElementById('menu-toggle');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuToggleButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+
+</html>
