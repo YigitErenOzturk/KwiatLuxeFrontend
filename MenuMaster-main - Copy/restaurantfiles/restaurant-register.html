@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Register</title>
+    <link rel="stylesheet" href="../assets/css/restaurantcss/restaurant.css">
+</head>
+
+<body>
+    <header>
+        <img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+    </header>
+
+    <h2>Restaurant Registration</h2>
+    <form id="restaurant-register-form">
+        <input type="text" id="restaurant-name" placeholder="Restaurant Name" required>
+        <input type="email" id="restaurant-email" placeholder="Email" required>
+        <input type="password" id="restaurant-password" placeholder="Password" required>
+        <input type="text" id="restaurant-phone" placeholder="Phone Number" required>
+        <input type="text" id="restaurant-description" placeholder="Description" required>
+        <input type="text" id="restaurant-location" placeholder="Location" required>
+        <input type="text" id="restaurant-image" placeholder="Image URL" required>
+
+ 
+
+        <button type="submit">Register</button>
+        <div class="buttons">
+            <button onclick="window.location.href='restaurant-login.html'">I already have restaurant account !</button>
+        </div>
+    </form>
+    
+    <script src="../assets/js/restaurant-js/restaurant-register.js"></script>
+
+    <button onclick="window.location.href='../index.html'">Go back to Main Menu</button>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #ff8c42;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+.logo {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* BUTTONS (Admin & Restaurant Login) */
+.buttons {
+    margin-top: 15px;
+}
+
+.login-btn {
+    background: white;
+    color: #ff8c42;
+    border: 2px solid #ff8c42;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.login-btn:hover {
+    background: #ff6f00;
+    color: white;
+    border: 2px solid #ff6f00;
+}
+
+/* LOGIN FORM */
+.login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.login-form h2 {
+    color: #ff8c42;
+}
+
+.login-form label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* LOGIN BUTTONS */
+.login-form button {
+    background: #ff8c42;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background: #ff6f00;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* RECAPTCHA */
+.g-recaptcha {
+    margin: 10px auto;
+}
+
+/* GO BACK BUTTON */
+button {
+    background: #666;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .login-form {
+        width: 95%;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

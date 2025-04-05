@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reservations - MenuMaster</title>
+    <link rel="stylesheet" href="../assets/css/usercss/user.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Reservations</h1>
+    <img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+
+    <button class="back-button" onclick="window.location.href='usermainmenu.html'">⬅️ Back to Main Menu</button>
+</header>
+
+<main class="reservations-container">
+    <h2>Your Reservations</h2>
+
+    <!-- reservation table -->
+    <table class="reservations-table">
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Guests</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="reservations-list">
+            <!-- APİ Data for reservations -->
+            <tr>
+                <td colspan="6">Loading reservations...</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <p>&copy; 2025 MenuMaster. All rights reserved.</p>
+</footer>
+
+<script>
+    // Take reservations from APİ
+    async function loadReservations() {
+        const reservationsList = document.getElementById('reservations-list');
+
+        try {
+            const response = await fetch('https://your-api-endpoint.com/api/user/reservations', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YOUR_API_TOKEN'
+                }
+            });
+
+            if (!response.ok) {
+                reservationsList.innerHTML = '<tr><td colspan="6">Failed to load reservations.</td></tr>';
+                return;
+            }
+
+            const reservations = await response.json();
+
+            if (reservations.length === 0) {
+                reservationsList.innerHTML = '<tr><td colspan="6">No reservations found.</td></tr>';
+                return;
+            }
+
+            const rows = reservations.map(reservation => `
+                <tr>
+                    <td>${reservation.restaurantName}</td>
+                    <td>${reservation.date}</td>
+                    <td>${reservation.time}</td>
+                    <td>${reservation.guests}</td>
+                    <td class="${reservation.status.toLowerCase()}">${reservation.status}</td>
+                    <td>
+                        <button class="button cancel-button" onclick="cancelReservation('${reservation.id}')">Cancel</button>
+                    </td>
+                </tr>
+            `).join('');
+
+            reservationsList.innerHTML = rows;
+        } catch (error) {
+            console.error('Error loading reservations:', error);
+            reservationsList.innerHTML = '<tr><td colspan="6">An error occurred. Please try again later.</td></tr>';
+        }
+    }
+
+    // Cancel reservation
+    async function cancelReservation(id) {
+        if (!confirm('Are you sure you want to cancel this reservation?')) return;
+
+        try {
+            const response = await fetch(`https://your-api-endpoint.com/api/user/reservations/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YOUR_API_TOKEN'
+                }
+            });
+
+            if (response.ok) {
+                alert('Reservation cancelled successfully.');
+                loadReservations(); // Update Reservation
+            } else {
+                alert('Failed to cancel the reservation.');
+            }
+        } catch (error) {
+            console.error('Error cancelling reservation:', error);
+            alert('An error occurred. Please try again.');
+        }
+    }
+
+    // when page uploaded take infos for reservation
+    document.addEventListener('DOMContentLoaded', loadReservations);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #ff8c42;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+.logo {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button {
+    background: white;
+    color: #ff8c42;
+    border: 2px solid #ff8c42;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.buttons button:hover {
+    background: #ff6f00;
+    color: white;
+    border: 2px solid #ff6f00;
+}
+
+/* DESCRIPTION */
+.description {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.description h2 {
+    font-size: 26px;
+    color: #ff8c42;
+}
+
+.description p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* RESERVATION SECTION */
+.reservation-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.reservation-section h3 {
+    color: #ff8c42;
+}
+
+.reservation-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reservation-section label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.reservation-section select,
+.reservation-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.reservation-section button {
+    background: #ff8c42;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reservation-section button:hover {
+    background: #ff6f00;
+}
+
+/* RECOMMENDED RESTAURANTS */
+.recommended-section {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.recommended-section h2 {
+    color: #ff8c42;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.recommended-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.recommended-list div {
+    background: #ffe5d1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .description h2 {
+        font-size: 22px;
+    }
+
+    .reservation-section {
+        width: 95%;
+    }
+
+    .recommended-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .buttons button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

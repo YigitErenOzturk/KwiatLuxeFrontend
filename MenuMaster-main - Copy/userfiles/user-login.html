@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - MenuMaster</title>
+    <link rel="stylesheet" href="../assets/css/usercss/user-login.css">
+</head>
+
+<body>
+
+    <!-- Login buttons -->
+    <div class="buttons">
+        <button class="login-btn" onclick="window.location.href='../adminfiles/admin-login.html'">Login As Admin</button>
+        <button class="login-btn" onclick="window.location.href='../restaurantfiles/restaurant-login.html'">Login As Restaurant</button>
+    </div>
+
+    <header>
+        <h1>Welcome to MenuMaster</h1>
+        <img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+    </header>
+
+    <div class="login-form">
+        <h2>User Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+             <!-- reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LclPfIqAAAAAPZ64Mg_n-_VCYp8V72gSXU_GZ4Y"></div>
+
+    <!-- reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+            <button type="submit">Login</button>
+            <button onclick="window.location.href='user-forgotpassword.html'">I forgot my password !</button>
+            <button onclick="window.location.href='user-register.html'">I do not have an account !</button>
+            
+        </form>
+        <p id="error-message" class="error-message"></p> <!-- for error message -->
+    </div>
+
+    <!-- login.js  -->
+    <script src="../assets/js/user-js/login.js"></script>
+
+    <button onclick="window.location.href='../index.html'">Go back to Main Menu</button>
+
+</body>
+
+</html>

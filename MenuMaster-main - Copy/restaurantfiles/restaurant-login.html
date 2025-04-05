@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Login - MenuMaster</title>
+    <link rel="stylesheet" href="../assets/css/restaurantcss/restaurant.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Restaurant Login</h1>
+        <img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+    </header>
+
+    <section class="login-form-container">
+        <form id="restaurant-login-form">
+            <input type="text" id="usernameOrEmail" name="usernameOrEmail" placeholder="Username or Email" required />
+            <input type="password" id="restaurant-password" name="password" placeholder="Password" required />
+            <!-- reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LclPfIqAAAAAPZ64Mg_n-_VCYp8V72gSXU_GZ4Y"></div>
+
+    <!-- reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <button type="submit">Login</button>
+            <div class="buttons">
+                <button onclick="window.location.href='restaurant-forgotpassword.html'">I forgot my password !</button>
+            </div>
+        </form>
+        <p id="error-message" class="error-message"></p> <!-- for error message -->
+    </section>
+
+    <script src="../assets/js/restaurant-js/restaurant-login.js"></script>
+
+    <button onclick="window.location.href='../index.html'">Go back to Main Menu</button>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Page Settings -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Main Menu</title>
+    <link rel="stylesheet" href="../assets/css/usercss/usermainmenu.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to MenuMaster</h1>
+        <img src="../assets/images/logo.jpg" alt="MenuMaster Logo" class="logo">
+        <div class="menu-container">
+            <!-- User Menu Buttons -->
+            <button id="menu-toggle" class="menu-button">☰</button>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <ul>
+                    <li><a href="user-profile.html">Profile</a></li> 
+                    <li><a href="reservations.html">My Reservations</a></li>
+                    <li><a href="reviews.html">My Reviews</a></li>
+                    <button onclick="logout()">Logout</button>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+ <!-- Welcome Messages And Reservation Part -->
+    <main>
+        <section class="welcome-message">
+            <h2>Welcome, <span id="welcomeUser"></span>!</h2>
+            <p>Explore restaurants, make reservations, and share your dining experience with the world!</p>
+        </section>
+
+        <section class="main-actions">
+            <div class="action">
+                <h3>Search for Restaurants</h3>
+                <p>Find restaurants near you and explore their menus.</p>
+                <div class="city-selection">
+                    <label for="city">Select City:</label>
+                    <select id="city" name="city">
+                        <option value="">Select a city</option>
+                        <option value="Warsaw">Warsaw</option>
+                        <option value="Krakow">Krakow</option>
+                        <option value="Poznan">Poznan</option>
+                        <option value="Gdansk">Gdansk</option>
+                        <option value="Wroclaw">Wroclaw</option>
+                    </select>
+                    <button onclick="findRestaurants()">Find Restaurants</button>
+                </div>
+                <div id="restaurant-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MenuMaster. All rights reserved.</p>
+    </footer>
+    <!-- Script Connection -->
+    <script src="../assets/js/user-js/usermainmenu.js"></script>
+
+</body>
+
+</html>
