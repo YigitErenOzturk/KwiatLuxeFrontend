@@ -1,4 +1,4 @@
-const apiBaseUrl = "https://your-api-url.com"; // Gerçek API URL'n ile değiştir
+const apiBaseUrl = "https://your-api-url.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   showWelcomeMessage();
@@ -62,7 +62,7 @@ function createProductCard(product) {
   });
 
   card.querySelector(".add-cart-btn").addEventListener("click", () => {
-    window.location.href = "ShoppingCard.html";
+    window.location.href = "pages/login.html";
   });
 
   return card;
