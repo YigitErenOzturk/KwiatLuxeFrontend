@@ -1,0 +1,21 @@
+﻿# .NET
+bin/
+obj/
+.vs/
+.vscode/
+idea/
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# ASP.NET temporary files
+*.suo
+*.user
+*.userosscache
